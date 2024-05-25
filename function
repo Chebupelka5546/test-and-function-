@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static List<int> IncreaseVector(List<int> vector, int n)
+    {
+        for (int i = 0; i < vector.Count; i++)
+        {
+            vector[i] += n;
+        }
+        return vector;
+    }
+
+    public static void Main()
+    {
+        List<int> testVector = new List<int> { 1, 2, 3, 4, 5 };
+        int n = 10;
+        List<int> result = IncreaseVector(testVector, n);
+
+        Console.WriteLine("Modified Vector:");
+        foreach (var num in result)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
