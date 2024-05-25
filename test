@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using Xunit;
+
+public class ProgramTests
+{
+    [Fact]
+    public void TestIncreaseVector()
+    {
+        // Arrange
+        List<int> vector = new List<int> { 1, 2, 3, 4, 5 };
+        int n = 10;
+
+        // Act
+        var result = Program.IncreaseVector(vector, n);
+
+        // Assert
+        List<int> expected = new List<int> { 11, 12, 13, 14, 15 };
+        Assert.Equal(expected, result);
+    }
+}
